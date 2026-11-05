@@ -1,0 +1,35 @@
+
+[
+  {
+    "name": "Exemplo de jogo PS4",
+    "type": "game",
+    "version": "1.00",
+    "region": "EUR",
+    "cover": "",
+    "url": ""
+  },
+  {
+    "name": "Exemplo de aplicativo",
+    "type": "app",
+    "version": "1.00",
+    "region": "—",
+    "cover": "",
+    "url": ""
+  },
+  {
+    "name": "Exemplo de DLC",
+    "type": "dlc",
+    "version": "—",
+    "region": "—",
+    "cover": "",
+    "url": ""
+  },
+  {
+    "name": "Exemplo de atualização",
+    "type": "update",
+    "version": "—",
+    "region": "—",
+    "cover": "",
+    "url": ""
+  }
+]

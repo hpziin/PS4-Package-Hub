@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PS4 Package Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="brand">
+        <span class="logo">P</span>
+        <div>
+            <strong>PS4 PACKAGE HUB</strong>
+            <small>GOLDHEN EDITION</small>
+        </div>
+    </div>
+    <div class="status">
+        <span id="statusDot"></span>
+        <span id="statusText">DESCONECTADO</span>
+    </div>
+</header>
+
+<div class="layout">
+    <aside class="sidebar">
+        <a href="#dashboard">▦ Painel</a>
+        <a href="#catalog">▤ Catálogo</a>
+        <a href="#queue">⇄ Tarefas</a>
+        <a href="#settings">⚙ Conexão</a>
+    </aside>
+
+    <main>
+        <section id="dashboard" class="hero">
+            <p> CENTRAL DE CONTROLE </p>
+            <h1>PS4 Package <span>Hub.</span></h1>
+            <p>Gerencie seu catálogo e acompanhe tarefas do console.</p>
+        </section>
+
+        <section class="stats">
+            <article><small>CONSOLE</small><h2 id="consoleState">Offline</h2></article>
+            <article><small>FIRMWARE</small><h2 id="firmware">—</h2></article>
+            <article><small>GOLDHEN</small><h2 id="goldhen">—</h2></article>
+            <article><small>TAREFAS</small><h2 id="taskCount">0</h2></article>
+        </section>
+
+        <section id="settings" class="panel">
+            <h2>Conectar ao PS4</h2>
+            <label>IP do PS4</label>
+            <input id="ps4Ip" value="192.168.68.73">
+            <label>Porta HTTP do payload</label>
+            <input id="ps4Port" value="18181" type="number">
+            <label>Token</label>
+            <input id="apiToken" type="password" placeholder="Token de acesso">
+            <div class="actions">
+                <button id="connectBtn">Testar conexão</button>
+                <button id="disconnectBtn" class="secondary">Desconectar</button>
+            </div>
+            <p id="connectionMessage">O serviço HTTP do payload ainda precisa ser desenvolvido.</p>
+        </section>
+
+        <section id="catalog" class="panel">
+            <h2>Catálogo de pacotes</h2>
+            <div class="filters">
+                <input id="searchInput" placeholder="Pesquisar...">
+                <select id="typeFilter">
+                    <option value="all">Todas as categorias</option>
+                    <option value="game">Jogos</option>
+                    <option value="app">Aplicativos</option>
+                    <option value="dlc">DLC</option>
+                    <option value="update">Atualizações</option>
+                </select>
+            </div>
+            <div id="catalogGrid" class="catalog-grid">Carregando catálogo...</div>
+        </section>
+
+        <section id="queue" class="panel">
+            <h2>Fila de tarefas</h2>
+            <div id="jobsList">Nenhuma tarefa solicitada.</div>
+        </section>
+    </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
